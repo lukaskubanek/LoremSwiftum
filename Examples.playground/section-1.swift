@@ -41,3 +41,10 @@ let url = Lorem.URL()
 let tweet = Lorem.tweet()
 
 let date = Lorem.date()
+
+// Images
+
+let imageURL1 = Lorem.imageURL(CGSizeMake(100, 200))
+let imageURL2 = Lorem.imageURL(CGSizeMake(150, 40), service: .PlaceKitten)
+let imageURL3 = Lorem.imageURL(width: 400, height: 600, service: .Hhhhold)
+let imageURL4 = Lorem.imageURL(width: 200, height: 300, service: .DummyImage)

@@ -143,6 +143,39 @@ extension Lorem {
     
 }
 
+// MARK: - Images
+
+extension Lorem {
+    public enum ImageService {
+        case LoremPixel
+        case Hhhhold
+        case DummyImage
+        case PlaceKitten
+        case Default
+        
+        private func toURL(#width: Int, height: Int) -> NSURL {
+            switch self {
+            case .LoremPixel, .Default:
+                return NSURL(string: "http://lorempixel.com/\(width)/\(height)/")
+            case .Hhhhold:
+                return NSURL(string: "http://hhhhold.com/\(width)x\(height)/")
+            case .DummyImage:
+                return NSURL(string: "http://dummyimage.com/\(width)x\(height)/")
+            case .PlaceKitten:
+                return NSURL(string: "http://placekitten.com/\(width)/\(height)/")
+            }
+        }
+    }
+    
+    public class func imageURL(#width: Int, height: Int, service: ImageService = .Default) -> NSURL {
+        return service.toURL(width: width, height: height)
+    }
+    
+    public class func imageURL(size: CGSize, service: ImageService = .Default) -> NSURL {
+        return imageURL(width: Int(size.width), height: Int(size.height), service: service)
+    }
+}
+
 // MARK: - Private API
 
 extension Lorem {

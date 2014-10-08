@@ -11,6 +11,8 @@
 
 import Foundation
 
+// MARK: - Utilities
+
 func randomNumber(lowerBound: Int = 0, #upperBound: Int) -> Int {
     return lowerBound + Int(arc4random_uniform(UInt32(upperBound - lowerBound)))
 }
@@ -25,12 +27,16 @@ extension Array {
     }
 }
 
-func capitalizeFirstLetter(string: String) -> String {
-    let startIndex = string.startIndex
-    let endIndex = string.startIndex.successor()
-    let capitalizedFirstLetter = string.substringToIndex(advance(startIndex, 1)).capitalizedString
-    return string.stringByReplacingCharactersInRange(startIndex..<endIndex, withString: capitalizedFirstLetter)
+extension String {
+    func stringByCapitalizingFirstLetter() -> String {
+        let startIndex = self.startIndex
+        let endIndex = self.startIndex.successor()
+        let capitalizedFirstLetter = self.substringToIndex(advance(startIndex, 1)).capitalizedString
+        return self.stringByReplacingCharactersInRange(startIndex..<endIndex, withString: capitalizedFirstLetter)
+    }
 }
+
+// MARK: - Data
 
 private let allWords = "alias consequatur aut perferendis sit voluptatem accusantium doloremque aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem ut enim ad minima veniam quis nostrum exercitationem ullam corporis nemo enim ipsam voluptatem quia voluptas sit suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae et iusto odio dignissimos ducimus qui blanditiis praesentium laudantium totam rem voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident sed ut perspiciatis unde omnis iste natus error similique sunt in culpa qui officia deserunt mollitia animi id est laborum et dolorum fuga et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo porro quisquam est qui minus id quod maxime placeat facere possimus omnis voluptas assumenda est omnis dolor repellendus temporibus autem quibusdam et aut consequatur vel illum qui dolorem eum fugiat quo voluptas nulla pariatur at vero eos et accusamus officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores doloribus asperiores repellat".componentsSeparatedByString(" ")
 
@@ -46,7 +52,13 @@ private let domains = "twitter.com google.com youtube.com wordpress.org adobe.co
 
 private let tweets = ["Far away, in a forest next to a river beneath the mountains, there lived a small purple otter called Philip. Philip likes sausages. The End.", "He liked the quality sausages from Marks & Spencer but due to the recession he had been forced to shop in a less desirable supermarket. End.", "He awoke one day to find his pile of sausages missing. Roger the greedy boar with human eyes, had skateboarded into the forest & eaten them!"]
 
-public class Lorem {
+// MARK: - Public API
+
+public class Lorem {}
+
+// MARK: - Texts
+
+extension Lorem {
     public class func word() -> String {
         return allWords.randomElement()
     }
@@ -57,6 +69,7 @@ public class Lorem {
     
     public class func sentence() -> String {
         let numberOfWordsInSentence: UInt = randomNumber(lowerBound: 4, upperBound: 16)
+        let capitalizeFirstLetter: Decorator = { $0.stringByCapitalizingFirstLetter() }
         return compose(word, numberOfWordsInSentence, middleSeparator: " ", endSeparator: ".", decorator: capitalizeFirstLetter)
     }
     
@@ -77,7 +90,11 @@ public class Lorem {
         let numberOfWordsInTitle: UInt = randomNumber(lowerBound: 2, upperBound: 7)
         return words(numberOfWordsInTitle).capitalizedString
     }
-    
+}
+
+// MARK: - Misc Data
+
+extension Lorem {
     public class func name() -> String {
         return firstName() + " " + lastName()
     }
@@ -114,7 +131,10 @@ public class Lorem {
         let randomTimeInterval = NSTimeInterval(randomNumber(lowerBound: 0, upperBound: Int(timeIntervalSinceReferenceDate)))
         return referenceDate.dateByAddingTimeInterval(randomTimeInterval)
     }
+    
 }
+
+// MARK: - Private API
 
 extension Lorem {
     typealias Generator = (Void -> String)

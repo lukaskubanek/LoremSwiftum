@@ -11,6 +11,8 @@
 
 import LoremSwiftum
 
+// Texts
+
 let word = Lorem.word()
 let words0 = Lorem.words(0)
 let words1 = Lorem.words(1)
@@ -25,3 +27,17 @@ let paragraph = Lorem.paragraph()
 let paragraphs0 = Lorem.paragraphs(0)
 let paragraphs1 = Lorem.paragraphs(1)
 let paragraphs5 = Lorem.paragraphs(5)
+
+let title = Lorem.title()
+
+// Misc Data
+
+let name = Lorem.name()
+let firstName = Lorem.firstName()
+let lastName = Lorem.lastName()
+
+let email = Lorem.email()
+let url = Lorem.URL()
+let tweet = Lorem.tweet()
+
+let date = Lorem.date()

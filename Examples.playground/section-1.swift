@@ -11,6 +11,11 @@
 
 import LoremSwiftum
 
+// This is required in order to be able to the test asynchronous code
+// http://stackoverflow.com/a/24016254/670119
+import XCPlayground
+XCPSetExecutionShouldContinueIndefinitely()
+
 // Texts
 
 let word = Lorem.word()
@@ -57,3 +62,23 @@ let images = [
     Lorem.image(width: 400, height: 600, .Hhhhold),
     Lorem.image(width: 200, height: 300, .DummyImage)
 ]
+
+Lorem.image(CGSizeMake(100, 200)) {
+    let image = $0
+}
+
+Lorem.image(CGSizeMake(150, 70), .PlaceKitten) {
+    let image = $0
+}
+
+Lorem.image(width: 400, height: 600, .Hhhhold) {
+    let image = $0
+}
+
+Lorem.image(width: 200, height: 300, .DummyImage) {
+    let image = $0
+}
+
+Lorem.image(width: 300, height: 300) {
+    let image = $0
+}

@@ -182,6 +182,26 @@ extension Lorem {
     public class func image(size: CGSize, _ service: ImageService = .Default) -> UIImage {
         return image(width: Int(size.width), height: Int(size.height), service)
     }
+    
+    public class func image(#width: Int, height: Int, completionHandler: (UIImage -> Void)) {
+        image(width: width, height: height, .Default, completionHandler: completionHandler)
+    }
+    
+    public class func image(#width: Int, height: Int,  _ service: ImageService, completionHandler: (UIImage -> Void)) {
+        let request = NSURLRequest(URL: imageURL(width: width, height: height, service))
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
+            (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            completionHandler(UIImage(data: data))
+        }
+    }
+    
+    public class func image(size: CGSize, completionHandler: (UIImage -> Void)) {
+        image(size, .Default, completionHandler: completionHandler)
+    }
+    
+    public class func image(size: CGSize, _ service: ImageService, completionHandler: (UIImage -> Void)) {
+        image(width: Int(size.width), height: Int(size.height), service, completionHandler: completionHandler)
+    }
 }
 
 // MARK: - Private API

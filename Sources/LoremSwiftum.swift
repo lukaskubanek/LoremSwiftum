@@ -13,17 +13,25 @@ import Foundation
 
 // MARK: - Utilities
 
-func randomNumber(lowerBound: Int = 0, #upperBound: Int) -> Int {
-    return lowerBound + Int(arc4random_uniform(UInt32(upperBound - lowerBound)))
+func randomNumber(max: Int) -> Int {
+    return randomNumber(min: 0, max: max)
 }
 
-func randomNumber(lowerBound: UInt = 0, #upperBound: UInt) -> UInt {
-    return lowerBound + UInt(arc4random_uniform(UInt32(upperBound - lowerBound)))
+func randomNumber(max: UInt) -> UInt {
+    return randomNumber(min: 0, max: max)
+}
+
+func randomNumber(#min: Int, #max: Int) -> Int {
+    return min + Int(arc4random_uniform(UInt32(max - min)))
+}
+
+func randomNumber(#min: UInt, #max: UInt) -> UInt {
+    return UInt(randomNumber(min: Int(min), max: Int(max)))
 }
 
 extension Array {
     func randomElement() -> T {
-        return self[randomNumber(upperBound: self.count)]
+        return self[randomNumber(self.count)]
     }
 }
 
@@ -50,6 +58,7 @@ private let emailDelimiters = ["", ".", "-", "_"]
 
 private let domains = "twitter.com google.com youtube.com wordpress.org adobe.com blogspot.com godaddy.com wikipedia.org wordpress.com yahoo.com linkedin.com amazon.com flickr.com w3.org apple.com myspace.com tumblr.com digg.com microsoft.com vimeo.com pinterest.com qq.com stumbleupon.com youtu.be addthis.com miibeian.gov.cn delicious.com baidu.com feedburner.com bit.ly".componentsSeparatedByString(" ")
 
+// Source: http://www.kevadamson.com/talking-of-design/article/140-alternative-characters-to-lorem-ipsum
 private let tweets = ["Far away, in a forest next to a river beneath the mountains, there lived a small purple otter called Philip. Philip likes sausages. The End.", "He liked the quality sausages from Marks & Spencer but due to the recession he had been forced to shop in a less desirable supermarket. End.", "He awoke one day to find his pile of sausages missing. Roger the greedy boar with human eyes, had skateboarded into the forest & eaten them!"]
 
 // MARK: - Public API
@@ -68,7 +77,7 @@ extension Lorem {
     }
     
     public class func sentence() -> String {
-        let numberOfWordsInSentence: UInt = randomNumber(lowerBound: 4, upperBound: 16)
+        let numberOfWordsInSentence: UInt = randomNumber(min: 4, max: 16)
         let capitalizeFirstLetter: Decorator = { $0.stringByCapitalizingFirstLetter() }
         return compose(word, numberOfWordsInSentence, middleSeparator: " ", endSeparator: ".", decorator: capitalizeFirstLetter)
     }
@@ -78,7 +87,7 @@ extension Lorem {
     }
     
     public class func paragraph() -> String {
-        let numberOfSentencesInParagraph: UInt = randomNumber(lowerBound: 3, upperBound: 9)
+        let numberOfSentencesInParagraph: UInt = randomNumber(min: 3, max: 9)
         return sentences(numberOfSentencesInParagraph)
     }
     
@@ -87,7 +96,7 @@ extension Lorem {
     }
     
     public class func title() -> String {
-        let numberOfWordsInTitle: UInt = randomNumber(lowerBound: 2, upperBound: 7)
+        let numberOfWordsInTitle: UInt = randomNumber(min: 2, max: 7)
         return words(numberOfWordsInTitle).capitalizedString
     }
 }
@@ -128,7 +137,7 @@ extension Lorem {
         referenceDateComponents.year = -4
         let referenceDate = currentCalendar.dateByAddingComponents(referenceDateComponents, toDate: currentDate, options: nil)!
         let timeIntervalSinceReferenceDate = currentDate.timeIntervalSinceDate(referenceDate)
-        let randomTimeInterval = NSTimeInterval(randomNumber(lowerBound: 0, upperBound: Int(timeIntervalSinceReferenceDate)))
+        let randomTimeInterval = NSTimeInterval(randomNumber(min: 0, max: Int(timeIntervalSinceReferenceDate)))
         return referenceDate.dateByAddingTimeInterval(randomTimeInterval)
     }
     

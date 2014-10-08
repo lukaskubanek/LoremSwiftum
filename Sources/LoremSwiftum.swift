@@ -124,7 +124,7 @@ extension Lorem {
     }
     
     public class func URL() -> NSURL {
-        return NSURL(string: "http://" + domains.randomElement() + "/")
+        return NSURL(string: "http://" + domains.randomElement() + "/")!
     }
     
     public class func tweet() -> String {
@@ -157,13 +157,13 @@ extension Lorem {
         private func toURL(width: Int, _ height: Int) -> NSURL {
             switch self {
             case .LoremPixel, .Default:
-                return NSURL(string: "http://lorempixel.com/\(width)/\(height)/")
+                return NSURL(string: "http://lorempixel.com/\(width)/\(height)/")!
             case .Hhhhold:
-                return NSURL(string: "http://hhhhold.com/\(width)x\(height)/")
+                return NSURL(string: "http://hhhhold.com/\(width)x\(height)/")!
             case .DummyImage:
-                return NSURL(string: "http://dummyimage.com/\(width)x\(height)/")
+                return NSURL(string: "http://dummyimage.com/\(width)x\(height)/")!
             case .PlaceKitten:
-                return NSURL(string: "http://placekitten.com/\(width)/\(height)")
+                return NSURL(string: "http://placekitten.com/\(width)/\(height)")!
             }
         }
     }
@@ -177,7 +177,7 @@ extension Lorem {
     }
     
     public class func image(#width: Int, height: Int, _ service: ImageService = .Default) -> UIImage {
-        return UIImage(data: NSData(contentsOfURL: imageURL(width: width, height: height, service)))
+        return UIImage(data: NSData(contentsOfURL: imageURL(width: width, height: height, service))!)!
     }
     
     public class func image(size: CGSize, _ service: ImageService = .Default) -> UIImage {
@@ -192,7 +192,7 @@ extension Lorem {
         let request = NSURLRequest(URL: imageURL(width: width, height: height, service))
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
             (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            completionHandler(UIImage(data: data))
+            completionHandler(UIImage(data: data)!)
         }
     }
     

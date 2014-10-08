@@ -44,7 +44,16 @@ let date = Lorem.date()
 
 // Images
 
-let imageURL1 = Lorem.imageURL(CGSizeMake(100, 200))
-let imageURL2 = Lorem.imageURL(CGSizeMake(150, 40), service: .PlaceKitten)
-let imageURL3 = Lorem.imageURL(width: 400, height: 600, service: .Hhhhold)
-let imageURL4 = Lorem.imageURL(width: 200, height: 300, service: .DummyImage)
+let imageURLs = [
+    Lorem.imageURL(CGSizeMake(100, 200)),
+    Lorem.imageURL(CGSizeMake(150, 70), .PlaceKitten),
+    Lorem.imageURL(width: 400, height: 600, .Hhhhold),
+    Lorem.imageURL(width: 200, height: 300, .DummyImage)
+]
+
+let images = [
+    Lorem.image(CGSizeMake(100, 200)),
+    Lorem.image(CGSizeMake(150, 70), .PlaceKitten),
+    Lorem.image(width: 400, height: 600, .Hhhhold),
+    Lorem.image(width: 200, height: 300, .DummyImage)
+]

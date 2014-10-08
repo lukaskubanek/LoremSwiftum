@@ -153,7 +153,7 @@ extension Lorem {
         case PlaceKitten
         case Default
         
-        private func toURL(#width: Int, height: Int) -> NSURL {
+        private func toURL(width: Int, _ height: Int) -> NSURL {
             switch self {
             case .LoremPixel, .Default:
                 return NSURL(string: "http://lorempixel.com/\(width)/\(height)/")
@@ -162,17 +162,25 @@ extension Lorem {
             case .DummyImage:
                 return NSURL(string: "http://dummyimage.com/\(width)x\(height)/")
             case .PlaceKitten:
-                return NSURL(string: "http://placekitten.com/\(width)/\(height)/")
+                return NSURL(string: "http://placekitten.com/\(width)/\(height)")
             }
         }
     }
     
-    public class func imageURL(#width: Int, height: Int, service: ImageService = .Default) -> NSURL {
-        return service.toURL(width: width, height: height)
+    public class func imageURL(#width: Int, height: Int, _ service: ImageService = .Default) -> NSURL {
+        return service.toURL(width, height)
     }
     
-    public class func imageURL(size: CGSize, service: ImageService = .Default) -> NSURL {
-        return imageURL(width: Int(size.width), height: Int(size.height), service: service)
+    public class func imageURL(size: CGSize, _ service: ImageService = .Default) -> NSURL {
+        return imageURL(width: Int(size.width), height: Int(size.height), service)
+    }
+    
+    public class func image(#width: Int, height: Int, _ service: ImageService = .Default) -> UIImage {
+        return UIImage(data: NSData(contentsOfURL: imageURL(width: width, height: height, service)))
+    }
+    
+    public class func image(size: CGSize, _ service: ImageService = .Default) -> UIImage {
+        return image(width: Int(size.width), height: Int(size.height), service)
     }
 }
 

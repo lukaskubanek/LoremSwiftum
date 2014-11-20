@@ -15,30 +15,30 @@ import UIKit
 
 // MARK: - Utilities
 
-func randomNumber(max: Int) -> Int {
+private func randomNumber(max: Int) -> Int {
     return randomNumber(min: 0, max: max)
 }
 
-func randomNumber(max: UInt) -> UInt {
+private func randomNumber(max: UInt) -> UInt {
     return randomNumber(min: 0, max: max)
 }
 
-func randomNumber(#min: Int, #max: Int) -> Int {
+private func randomNumber(#min: Int, #max: Int) -> Int {
     return min + Int(arc4random_uniform(UInt32(max - min)))
 }
 
-func randomNumber(#min: UInt, #max: UInt) -> UInt {
+private func randomNumber(#min: UInt, #max: UInt) -> UInt {
     return UInt(randomNumber(min: Int(min), max: Int(max)))
 }
 
 extension Array {
-    func randomElement() -> T {
+    private func randomElement() -> T {
         return self[randomNumber(self.count)]
     }
 }
 
 extension String {
-    func stringByCapitalizingFirstLetter() -> String {
+    private func stringByCapitalizingFirstLetter() -> String {
         let startIndex = self.startIndex
         let endIndex = self.startIndex.successor()
         let capitalizedFirstLetter = self.substringToIndex(advance(startIndex, 1)).capitalizedString
@@ -209,8 +209,8 @@ extension Lorem {
 // MARK: - Private API
 
 extension Lorem {
-    typealias Generator = (Void -> String)
-    typealias Decorator = (String -> String)
+    private typealias Generator = (Void -> String)
+    private typealias Decorator = (String -> String)
     
     private class func compose(generator: Generator, _ count: UInt, middleSeparator: String, endSeparator: String = "", decorator: Decorator = { $0 }) -> String {
         var result = ""

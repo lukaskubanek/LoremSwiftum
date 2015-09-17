@@ -11,15 +11,30 @@
 		80425AFC1AF5FEAF0030E6C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80425AFB1AF5FEAF0030E6C3 /* Foundation.framework */; };
 		807E43911AF5FF86001D4F31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807E43901AF5FF86001D4F31 /* UIKit.framework */; };
 		808383EB1BAA98B80075603A /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808383EA1BAA98B80075603A /* LoremSwiftum.swift */; settings = {ASSET_TAGS = (); }; };
+		808383F71BAAB1B00075603A /* LoremSwiftum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802CD5B41A1E9F090067165F /* LoremSwiftum.framework */; settings = {ASSET_TAGS = (); }; };
+		808384041BAAB5C10075603A /* LoremSwiftumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808384031BAAB5C10075603A /* LoremSwiftumTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		808383F81BAAB1B00075603A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8094BE5A19E5521A00CBE5A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 802CD5B31A1E9F090067165F;
+			remoteInfo = LoremSwiftum;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		802CD5B41A1E9F090067165F /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80425AFA1AF5FD990030E6C3 /* Examples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Examples.playground; sourceTree = "<group>"; };
+		80425AFA1AF5FD990030E6C3 /* LoremSwiftum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoremSwiftum.playground; sourceTree = "<group>"; };
 		80425AFB1AF5FEAF0030E6C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		807E43901AF5FF86001D4F31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		808383EA1BAA98B80075603A /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
-		80B67B4319E5603D00D2DEC2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		808383F21BAAB1B00075603A /* LoremSwiftum-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoremSwiftum-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		808384001BAAB2440075603A /* Info-Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Tests.plist"; sourceTree = "<group>"; };
+		808384011BAAB2440075603A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		808384031BAAB5C10075603A /* LoremSwiftumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftumTests.swift; sourceTree = "<group>"; };
 		80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremSwiftum.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,14 +48,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		808383EF1BAAB1B00075603A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808383F71BAAB1B00075603A /* LoremSwiftum.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		802CD5CF1A1EA1A80067165F /* Examples */ = {
+		802CD5CF1A1EA1A80067165F /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				80425AFA1AF5FD990030E6C3 /* Examples.playground */,
+				80425AFA1AF5FD990030E6C3 /* LoremSwiftum.playground */,
 			);
+			name = Playgrounds;
 			path = Examples;
 			sourceTree = "<group>";
 		};
@@ -53,11 +77,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		808383FF1BAAB2440075603A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				808384001BAAB2440075603A /* Info-Tests.plist */,
+				808384011BAAB2440075603A /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		808384021BAAB5C10075603A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				808384031BAAB5C10075603A /* LoremSwiftumTests.swift */,
+			);
+			path = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
 		8094BE5919E5521A00CBE5A0 = {
 			isa = PBXGroup;
 			children = (
 				80B67B4219E5603D00D2DEC2 /* Sources */,
-				802CD5CF1A1EA1A80067165F /* Examples */,
+				802CD5CF1A1EA1A80067165F /* Playgrounds */,
+				808384021BAAB5C10075603A /* Tests */,
+				808383FF1BAAB2440075603A /* Supporting Files */,
 				80425AFD1AF5FEB40030E6C3 /* Frameworks */,
 				8094BE6419E5521A00CBE5A0 /* Products */,
 			);
@@ -67,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				802CD5B41A1E9F090067165F /* LoremSwiftum.framework */,
+				808383F21BAAB1B00075603A /* LoremSwiftum-iOS-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,9 +118,8 @@
 		80B67B4219E5603D00D2DEC2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				808383EA1BAA98B80075603A /* LoremSwiftum.swift */,
 				80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */,
-				80B67B4319E5603D00D2DEC2 /* Info.plist */,
+				808383EA1BAA98B80075603A /* LoremSwiftum.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -95,9 +138,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		802CD5B31A1E9F090067165F /* LoremSwiftum */ = {
+		802CD5B31A1E9F090067165F /* LoremSwiftum-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 802CD5C71A1E9F090067165F /* Build configuration list for PBXNativeTarget "LoremSwiftum" */;
+			buildConfigurationList = 802CD5C71A1E9F090067165F /* Build configuration list for PBXNativeTarget "LoremSwiftum-iOS" */;
 			buildPhases = (
 				802CD5AF1A1E9F090067165F /* Sources */,
 				802CD5B01A1E9F090067165F /* Frameworks */,
@@ -108,10 +151,28 @@
 			);
 			dependencies = (
 			);
-			name = LoremSwiftum;
+			name = "LoremSwiftum-iOS";
 			productName = LoremSwiftum;
 			productReference = 802CD5B41A1E9F090067165F /* LoremSwiftum.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		808383F11BAAB1B00075603A /* LoremSwiftum-iOS-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 808383FA1BAAB1B00075603A /* Build configuration list for PBXNativeTarget "LoremSwiftum-iOS-Tests" */;
+			buildPhases = (
+				808383EE1BAAB1B00075603A /* Sources */,
+				808383EF1BAAB1B00075603A /* Frameworks */,
+				808383F01BAAB1B00075603A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				808383F91BAAB1B00075603A /* PBXTargetDependency */,
+			);
+			name = "LoremSwiftum-iOS-Tests";
+			productName = "LoremSwiftum-iOS-Tests";
+			productReference = 808383F21BAAB1B00075603A /* LoremSwiftum-iOS-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -125,6 +186,9 @@
 				TargetAttributes = {
 					802CD5B31A1E9F090067165F = {
 						CreatedOnToolsVersion = 6.1;
+					};
+					808383F11BAAB1B00075603A = {
+						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
@@ -140,13 +204,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				802CD5B31A1E9F090067165F /* LoremSwiftum */,
+				802CD5B31A1E9F090067165F /* LoremSwiftum-iOS */,
+				808383F11BAAB1B00075603A /* LoremSwiftum-iOS-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		802CD5B21A1E9F090067165F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808383F01BAAB1B00075603A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,7 +236,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		808383EE1BAAB1B00075603A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808384041BAAB5C10075603A /* LoremSwiftumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		808383F91BAAB1B00075603A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 802CD5B31A1E9F090067165F /* LoremSwiftum-iOS */;
+			targetProxy = 808383F81BAAB1B00075603A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		802CD5C81A1E9F090067165F /* Debug */ = {
@@ -180,12 +268,12 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lukaskubanek.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LoremSwiftum;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -202,15 +290,42 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lukaskubanek.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LoremSwiftum;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = Release;
+		};
+		808383FB1BAAB1B00075603A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Supporting Files/Info-Tests.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lukaskubanek.LoremSwiftum-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		808383FC1BAAB1B00075603A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Supporting Files/Info-Tests.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lukaskubanek.LoremSwiftum-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -303,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		802CD5C71A1E9F090067165F /* Build configuration list for PBXNativeTarget "LoremSwiftum" */ = {
+		802CD5C71A1E9F090067165F /* Build configuration list for PBXNativeTarget "LoremSwiftum-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				802CD5C81A1E9F090067165F /* Debug */,
@@ -311,6 +426,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		808383FA1BAAB1B00075603A /* Build configuration list for PBXNativeTarget "LoremSwiftum-iOS-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808383FB1BAAB1B00075603A /* Debug */,
+				808383FC1BAAB1B00075603A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		8094BE5D19E5521A00CBE5A0 /* Build configuration list for PBXProject "LoremSwiftum" */ = {
 			isa = XCConfigurationList;

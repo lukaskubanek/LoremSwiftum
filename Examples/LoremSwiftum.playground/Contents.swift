@@ -5,7 +5,7 @@
 //     / /___/ /_/ / /  /  __/ / / / / /__/ / |/ |/ / / __/ /_/ /_/ / / / / / /
 //    /_____/\____/_/   \___/_/ /_/ /_/____/|__/|__/_/_/  \__/\__,_/_/ /_/ /_/
 //
-//                             Examples.playground
+//                           LoremSwiftum.playground
 //                 http://github.com/lukaskubanek/LoremSwiftum
 //            2014-2015 (c) Lukas Kubanek (http://lukaskubanek.com)
 //

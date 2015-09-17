@@ -16,7 +16,21 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "802CD5B31A1E9F090067165F"
                BuildableName = "LoremSwiftum.framework"
-               BlueprintName = "LoremSwiftum"
+               BlueprintName = "LoremSwiftum-iOS"
+               ReferencedContainer = "container:LoremSwiftum.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "808383F11BAAB1B00075603A"
+               BuildableName = "LoremSwiftum-iOS-Tests.xctest"
+               BlueprintName = "LoremSwiftum-iOS-Tests"
                ReferencedContainer = "container:LoremSwiftum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "808383F11BAAB1B00075603A"
+               BuildableName = "LoremSwiftum-iOS-Tests.xctest"
+               BlueprintName = "LoremSwiftum-iOS-Tests"
+               ReferencedContainer = "container:LoremSwiftum.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "802CD5B31A1E9F090067165F"
+            BuildableName = "LoremSwiftum.framework"
+            BlueprintName = "LoremSwiftum-iOS"
+            ReferencedContainer = "container:LoremSwiftum.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -47,7 +80,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "802CD5B31A1E9F090067165F"
             BuildableName = "LoremSwiftum.framework"
-            BlueprintName = "LoremSwiftum"
+            BlueprintName = "LoremSwiftum-iOS"
             ReferencedContainer = "container:LoremSwiftum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +98,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "802CD5B31A1E9F090067165F"
             BuildableName = "LoremSwiftum.framework"
-            BlueprintName = "LoremSwiftum"
+            BlueprintName = "LoremSwiftum-iOS"
             ReferencedContainer = "container:LoremSwiftum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

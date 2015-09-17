@@ -47,7 +47,7 @@ public class Lorem {
         return compose({ word }, count: numberOfWordsInTitle, middleSeparator: .Space, decorator: capitalizeStringDecorator)
     }
     
-    // MARK: - Misc Formats
+    // MARK: - Misc
     
     public static var firstName: String {
         return firstNames.randomElement

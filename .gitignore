@@ -1,6 +1,13 @@
-# Xcode
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
 
-build/
+# Ruby
+.ruby-*
+.rbenv-*
+
+# Xcode
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -17,3 +24,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 *.xctimeline
+
+# Carthage
+Carthage/Checkouts
+Carthage/**/OrderedDictionary*

@@ -7,12 +7,23 @@
 //
 
 import XCTest
-import LoremSwiftum
+@testable import LoremSwiftum
 
 class LoremSwiftumTests: XCTestCase {
     
-    func test() {
-
+    func testGenerationOfOneWord() {
+        let word = Lorem.word
+        
+        XCTAssert(word.characters.count > 0)
+        XCTAssert(!word.containsString(" "))
+    }
+    
+    func testGenerationOfSomeWords() {
+        let words = Lorem.words(4)
+        
+        XCTAssert(words.characters.count > 0)
+        XCTAssert(words.containsString(" "))
+        XCTAssertEqual(words.componentsSeparatedByString(" ").count, 4)
     }
     
 }

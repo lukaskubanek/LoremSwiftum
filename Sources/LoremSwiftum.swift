@@ -199,6 +199,9 @@ public class Lorem {
 private extension Int {
     
     private static func random(min min: Int = 0, max: Int) -> Int {
+        assert(min >= 0)
+        assert(min < max)
+        
         return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
     }
     
@@ -207,7 +210,7 @@ private extension Int {
 private extension Array {
     
     private var randomElement: Element {
-        return self[Int.random(count)]
+        return self[Int.random(max: count - 1)]
     }
     
 }

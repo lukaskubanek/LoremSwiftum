@@ -10,8 +10,7 @@
 //            2014-2015 (c) Lukas Kubanek (http://lukaskubanek.com)
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 FOUNDATION_EXPORT double LoremSwiftumVersionNumber;
 FOUNDATION_EXPORT const unsigned char LoremSwiftumVersionString[];

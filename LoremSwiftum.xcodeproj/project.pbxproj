@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		802CD5CE1A1E9F690067165F /* LoremSwiftum.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80425AFC1AF5FEAF0030E6C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80425AFB1AF5FEAF0030E6C3 /* Foundation.framework */; };
-		807E43911AF5FF86001D4F31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807E43901AF5FF86001D4F31 /* UIKit.framework */; };
 		808383EB1BAA98B80075603A /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808383EA1BAA98B80075603A /* LoremSwiftum.swift */; settings = {ASSET_TAGS = (); }; };
 		808383F71BAAB1B00075603A /* LoremSwiftum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802CD5B41A1E9F090067165F /* LoremSwiftum.framework */; settings = {ASSET_TAGS = (); }; };
 		808384041BAAB5C10075603A /* LoremSwiftumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808384031BAAB5C10075603A /* LoremSwiftumTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -43,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				807E43911AF5FF86001D4F31 /* UIKit.framework in Frameworks */,
 				80425AFC1AF5FEAF0030E6C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +432,7 @@
 				808383FC1BAAB1B00075603A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8094BE5D19E5521A00CBE5A0 /* Build configuration list for PBXProject "LoremSwiftum" */ = {
 			isa = XCConfigurationList;

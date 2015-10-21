@@ -12,7 +12,9 @@
 
 public class Lorem {
     
+    // ======================================================= //
     // MARK: - Text
+    // ======================================================= //
     
     public static var word: String {
         return allWords.randomElement
@@ -47,7 +49,9 @@ public class Lorem {
         return compose({ word }, count: numberOfWordsInTitle, middleSeparator: .Space, decorator: capitalizeStringDecorator)
     }
     
+    // ======================================================= //
     // MARK: - Misc
+    // ======================================================= //
     
     public static var firstName: String {
         return firstNames.randomElement
@@ -87,68 +91,9 @@ public class Lorem {
         return referenceDate.dateByAddingTimeInterval(randomTimeInterval)
     }
     
-    // MARK: - Images
-    
-    public enum ImageService {
-        
-        case Default
-        case LoremPixel
-        case Hhhhold
-        case DummyImage
-        case PlaceKitten
-        
-        private func toURL(width width: Int, height: Int) -> NSURL {
-            switch self {
-            case .Default, .LoremPixel:
-                return NSURL(string: "http://lorempixel.com/\(width)/\(height)/")!
-            case .Hhhhold:
-                return NSURL(string: "http://hhhhold.com/\(width)x\(height)/")!
-            case .DummyImage:
-                return NSURL(string: "http://dummyimage.com/\(width)x\(height)/")!
-            case .PlaceKitten:
-                return NSURL(string: "http://placekitten.com/\(width)/\(height)")!
-            }
-        }
-        
-    }
-    
-    public static func imageURL(width width: Int, height: Int, service: ImageService = .Default) -> NSURL {
-        return service.toURL(width: width, height: height)
-    }
-    
-    public static func imageURL(size size: CGSize, service: ImageService = .Default) -> NSURL {
-        return imageURL(width: Int(size.width), height: Int(size.height), service: service)
-    }
-    
-    public static func image(width width: Int, height: Int, service: ImageService = .Default) -> UIImage? {
-        let URL = imageURL(width: width, height: height, service: service)
-        
-        guard let data = NSData(contentsOfURL: URL) else { return nil }
-        
-        return UIImage(data: data)
-    }
-    
-    public static func image(size size: CGSize, service: ImageService = .Default) -> UIImage? {
-        return image(width: Int(size.width), height: Int(size.height), service: service)
-    }
-    
-    public static func image(width width: Int, height: Int, service: ImageService = .Default, completionHandler: UIImage? -> Void) {
-        let URL = imageURL(width: width, height: height, service: service)
-        let request = NSURLRequest(URL: URL)
-        let mainQueue = NSOperationQueue.mainQueue()
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue) { response, data, error in
-            if let data = data {
-                completionHandler(UIImage(data: data))
-            }
-        }
-    }
-    
-    public static func image(size size: CGSize, service: ImageService = .Default, completionHandler: UIImage? -> Void) {
-        image(width: Int(size.width), height: Int(size.height), service: service, completionHandler: completionHandler)
-    }
-    
+    // ======================================================= //
     // MARK: - Private
+    // ======================================================= //
     
     private enum Separator: String {
         case None = ""
@@ -177,7 +122,9 @@ public class Lorem {
         }
     }
     
+    // ======================================================= //
     // MARK: - Data
+    // ======================================================= //
     
     private static let allWords = "alias consequatur aut perferendis sit voluptatem accusantium doloremque aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem ut enim ad minima veniam quis nostrum exercitationem ullam corporis nemo enim ipsam voluptatem quia voluptas sit suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae et iusto odio dignissimos ducimus qui blanditiis praesentium laudantium totam rem voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident sed ut perspiciatis unde omnis iste natus error similique sunt in culpa qui officia deserunt mollitia animi id est laborum et dolorum fuga et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo porro quisquam est qui minus id quod maxime placeat facere possimus omnis voluptas assumenda est omnis dolor repellendus temporibus autem quibusdam et aut consequatur vel illum qui dolorem eum fugiat quo voluptas nulla pariatur at vero eos et accusamus officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores doloribus asperiores repellat".componentsSeparatedByString(" ")
     

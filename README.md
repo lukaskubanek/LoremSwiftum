@@ -4,6 +4,12 @@
 
 **LoremSwiftum** is a lightweight lorem ipsum generator for iOS and OS X written in Swift. It supports generating texts in different formats (words, sentences, paragraphs) and miscellaneous data (names, URLs, dates etc.). This framework is a reimplementation of the library [LoremIpsum](https://github.com/lukaskubanek/LoremIpsum) written in Objective-C.
 
+## Requirements
+
+- Swift 2.0
+- Xcode 7.0 GM
+- iOS 8.0+ / OS X 10.10+
+
 ## Installation
 
 ### Carthage

@@ -8,21 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		802CD5CE1A1E9F690067165F /* LoremSwiftum.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80425AFC1AF5FEAF0030E6C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80425AFB1AF5FEAF0030E6C3 /* Foundation.framework */; };
 		808383EB1BAA98B80075603A /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808383EA1BAA98B80075603A /* LoremSwiftum.swift */; settings = {ASSET_TAGS = (); }; };
-		808383F71BAAB1B00075603A /* LoremSwiftum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802CD5B41A1E9F090067165F /* LoremSwiftum.framework */; settings = {ASSET_TAGS = (); }; };
-		808384041BAAB5C10075603A /* LoremSwiftumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808384031BAAB5C10075603A /* LoremSwiftumTests.swift */; settings = {ASSET_TAGS = (); }; };
+		80863FDB1BD7868400C3D182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80863FDA1BD7868400C3D182 /* Foundation.framework */; };
+		80863FDD1BD7868D00C3D182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80863FDC1BD7868D00C3D182 /* Foundation.framework */; };
+		80863FDE1BD7869F00C3D182 /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808383EA1BAA98B80075603A /* LoremSwiftum.swift */; };
+		80863FDF1BD786A300C3D182 /* LoremSwiftum.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		808383F81BAAB1B00075603A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8094BE5A19E5521A00CBE5A0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 802CD5B31A1E9F090067165F;
-			remoteInfo = LoremSwiftum;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		802CD5B41A1E9F090067165F /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +21,11 @@
 		80425AFB1AF5FEAF0030E6C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		807E43901AF5FF86001D4F31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		808383EA1BAA98B80075603A /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
-		808383F21BAAB1B00075603A /* LoremSwiftum-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoremSwiftum-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		808384001BAAB2440075603A /* Info-Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Tests.plist"; sourceTree = "<group>"; };
 		808384011BAAB2440075603A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		808384031BAAB5C10075603A /* LoremSwiftumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftumTests.swift; sourceTree = "<group>"; };
+		80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80863FDA1BD7868400C3D182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		80863FDC1BD7868D00C3D182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremSwiftum.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,15 +34,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80425AFC1AF5FEAF0030E6C3 /* Foundation.framework in Frameworks */,
+				80863FDD1BD7868D00C3D182 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		808383EF1BAAB1B00075603A /* Frameworks */ = {
+		80863FCE1BD7864C00C3D182 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				808383F71BAAB1B00075603A /* LoremSwiftum.framework in Frameworks */,
+				80863FDB1BD7868400C3D182 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +61,8 @@
 		80425AFD1AF5FEB40030E6C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80863FDC1BD7868D00C3D182 /* Foundation.framework */,
+				80863FDA1BD7868400C3D182 /* Foundation.framework */,
 				80425AFB1AF5FEAF0030E6C3 /* Foundation.framework */,
 				807E43901AF5FF86001D4F31 /* UIKit.framework */,
 			);
@@ -84,20 +78,11 @@
 			path = "Supporting Files";
 			sourceTree = SOURCE_ROOT;
 		};
-		808384021BAAB5C10075603A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				808384031BAAB5C10075603A /* LoremSwiftumTests.swift */,
-			);
-			path = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
 		8094BE5919E5521A00CBE5A0 = {
 			isa = PBXGroup;
 			children = (
 				80B67B4219E5603D00D2DEC2 /* Sources */,
 				802CD5CF1A1EA1A80067165F /* Playgrounds */,
-				808384021BAAB5C10075603A /* Tests */,
 				808383FF1BAAB2440075603A /* Supporting Files */,
 				80425AFD1AF5FEB40030E6C3 /* Frameworks */,
 				8094BE6419E5521A00CBE5A0 /* Products */,
@@ -108,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				802CD5B41A1E9F090067165F /* LoremSwiftum.framework */,
-				808383F21BAAB1B00075603A /* LoremSwiftum-iOS-Tests.xctest */,
+				80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +118,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		80863FCF1BD7864C00C3D182 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80863FDF1BD786A300C3D182 /* LoremSwiftum.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -154,23 +147,23 @@
 			productReference = 802CD5B41A1E9F090067165F /* LoremSwiftum.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		808383F11BAAB1B00075603A /* LoremSwiftum-iOS-Tests */ = {
+		80863FD11BD7864C00C3D182 /* LoremSwiftum-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 808383FA1BAAB1B00075603A /* Build configuration list for PBXNativeTarget "LoremSwiftum-iOS-Tests" */;
+			buildConfigurationList = 80863FD71BD7864C00C3D182 /* Build configuration list for PBXNativeTarget "LoremSwiftum-OSX" */;
 			buildPhases = (
-				808383EE1BAAB1B00075603A /* Sources */,
-				808383EF1BAAB1B00075603A /* Frameworks */,
-				808383F01BAAB1B00075603A /* Resources */,
+				80863FCD1BD7864C00C3D182 /* Sources */,
+				80863FCE1BD7864C00C3D182 /* Frameworks */,
+				80863FCF1BD7864C00C3D182 /* Headers */,
+				80863FD01BD7864C00C3D182 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				808383F91BAAB1B00075603A /* PBXTargetDependency */,
 			);
-			name = "LoremSwiftum-iOS-Tests";
-			productName = "LoremSwiftum-iOS-Tests";
-			productReference = 808383F21BAAB1B00075603A /* LoremSwiftum-iOS-Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "LoremSwiftum-OSX";
+			productName = LoremSwiftum;
+			productReference = 80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -185,8 +178,8 @@
 					802CD5B31A1E9F090067165F = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					808383F11BAAB1B00075603A = {
-						CreatedOnToolsVersion = 7.0;
+					80863FD11BD7864C00C3D182 = {
+						CreatedOnToolsVersion = 7.0.1;
 					};
 				};
 			};
@@ -202,8 +195,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				80863FD11BD7864C00C3D182 /* LoremSwiftum-OSX */,
 				802CD5B31A1E9F090067165F /* LoremSwiftum-iOS */,
-				808383F11BAAB1B00075603A /* LoremSwiftum-iOS-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,7 +209,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		808383F01BAAB1B00075603A /* Resources */ = {
+		80863FD01BD7864C00C3D182 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -234,23 +227,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		808383EE1BAAB1B00075603A /* Sources */ = {
+		80863FCD1BD7864C00C3D182 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				808384041BAAB5C10075603A /* LoremSwiftumTests.swift in Sources */,
+				80863FDE1BD7869F00C3D182 /* LoremSwiftum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		808383F91BAAB1B00075603A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 802CD5B31A1E9F090067165F /* LoremSwiftum-iOS */;
-			targetProxy = 808383F81BAAB1B00075603A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		802CD5C81A1E9F090067165F /* Debug */ = {
@@ -300,30 +285,48 @@
 			};
 			name = Release;
 		};
-		808383FB1BAAB1B00075603A /* Debug */ = {
+		80863FD81BD7864C00C3D182 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Supporting Files/Info-Tests.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lukaskubanek.LoremSwiftum-iOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lukaskubanek.LoremSwiftum;
+				PRODUCT_NAME = LoremSwiftum;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		808383FC1BAAB1B00075603A /* Release */ = {
+		80863FD91BD7864C00C3D182 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Supporting Files/Info-Tests.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lukaskubanek.LoremSwiftum-iOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lukaskubanek.LoremSwiftum;
+				PRODUCT_NAME = LoremSwiftum;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -425,14 +428,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		808383FA1BAAB1B00075603A /* Build configuration list for PBXNativeTarget "LoremSwiftum-iOS-Tests" */ = {
+		80863FD71BD7864C00C3D182 /* Build configuration list for PBXNativeTarget "LoremSwiftum-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				808383FB1BAAB1B00075603A /* Debug */,
-				808383FC1BAAB1B00075603A /* Release */,
+				80863FD81BD7864C00C3D182 /* Debug */,
+				80863FD91BD7864C00C3D182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		8094BE5D19E5521A00CBE5A0 /* Build configuration list for PBXProject "LoremSwiftum" */ = {
 			isa = XCConfigurationList;

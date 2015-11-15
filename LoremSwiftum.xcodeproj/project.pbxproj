@@ -8,25 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		802CD5CE1A1E9F690067165F /* LoremSwiftum.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		808383EB1BAA98B80075603A /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808383EA1BAA98B80075603A /* LoremSwiftum.swift */; settings = {ASSET_TAGS = (); }; };
-		80863FDB1BD7868400C3D182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80863FDA1BD7868400C3D182 /* Foundation.framework */; };
-		80863FDD1BD7868D00C3D182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80863FDC1BD7868D00C3D182 /* Foundation.framework */; };
+		808383EB1BAA98B80075603A /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808383EA1BAA98B80075603A /* LoremSwiftum.swift */; };
 		80863FDE1BD7869F00C3D182 /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808383EA1BAA98B80075603A /* LoremSwiftum.swift */; };
 		80863FDF1BD786A300C3D182 /* LoremSwiftum.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80DF35101BF8F04A004F17C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DF350F1BF8F04A004F17C5 /* Foundation.framework */; };
+		80DF35111BF8F054004F17C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DF350F1BF8F04A004F17C5 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		802CD5B41A1E9F090067165F /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80425AFA1AF5FD990030E6C3 /* LoremSwiftum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoremSwiftum.playground; sourceTree = "<group>"; };
-		80425AFB1AF5FEAF0030E6C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		807E43901AF5FF86001D4F31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		808383EA1BAA98B80075603A /* LoremSwiftum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
-		808384001BAAB2440075603A /* Info-Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Tests.plist"; sourceTree = "<group>"; };
 		808384011BAAB2440075603A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80863FDA1BD7868400C3D182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		80863FDC1BD7868D00C3D182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremSwiftum.h; sourceTree = "<group>"; };
+		80DF350F1BF8F04A004F17C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		80DF35121BF8F082004F17C5 /* LoremSwiftum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoremSwiftum.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80863FDD1BD7868D00C3D182 /* Foundation.framework in Frameworks */,
+				80DF35111BF8F054004F17C5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80863FDB1BD7868400C3D182 /* Foundation.framework in Frameworks */,
+				80DF35101BF8F04A004F17C5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,19 +48,15 @@
 		802CD5CF1A1EA1A80067165F /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				80425AFA1AF5FD990030E6C3 /* LoremSwiftum.playground */,
+				80DF35121BF8F082004F17C5 /* LoremSwiftum.playground */,
 			);
-			name = Playgrounds;
-			path = Examples;
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 		80425AFD1AF5FEB40030E6C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				80863FDC1BD7868D00C3D182 /* Foundation.framework */,
-				80863FDA1BD7868400C3D182 /* Foundation.framework */,
-				80425AFB1AF5FEAF0030E6C3 /* Foundation.framework */,
-				807E43901AF5FF86001D4F31 /* UIKit.framework */,
+				80DF350F1BF8F04A004F17C5 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -72,11 +64,10 @@
 		808383FF1BAAB2440075603A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				808384001BAAB2440075603A /* Info-Tests.plist */,
 				808384011BAAB2440075603A /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		8094BE5919E5521A00CBE5A0 = {
 			isa = PBXGroup;
@@ -299,7 +290,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukaskubanek.LoremSwiftum;
 				PRODUCT_NAME = LoremSwiftum;
 				SDKROOT = macosx;
@@ -322,7 +312,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukaskubanek.LoremSwiftum;
 				PRODUCT_NAME = LoremSwiftum;
 				SDKROOT = macosx;
@@ -435,6 +424,7 @@
 				80863FD91BD7864C00C3D182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8094BE5D19E5521A00CBE5A0 /* Build configuration list for PBXProject "LoremSwiftum" */ = {
 			isa = XCConfigurationList;

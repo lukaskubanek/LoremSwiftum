@@ -138,9 +138,9 @@
 			productReference = 802CD5B41A1E9F090067165F /* LoremSwiftum.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		80863FD11BD7864C00C3D182 /* LoremSwiftum-OSX */ = {
+		80863FD11BD7864C00C3D182 /* LoremSwiftum-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80863FD71BD7864C00C3D182 /* Build configuration list for PBXNativeTarget "LoremSwiftum-OSX" */;
+			buildConfigurationList = 80863FD71BD7864C00C3D182 /* Build configuration list for PBXNativeTarget "LoremSwiftum-Mac" */;
 			buildPhases = (
 				80863FCD1BD7864C00C3D182 /* Sources */,
 				80863FCE1BD7864C00C3D182 /* Frameworks */,
@@ -151,7 +151,7 @@
 			);
 			dependencies = (
 			);
-			name = "LoremSwiftum-OSX";
+			name = "LoremSwiftum-Mac";
 			productName = LoremSwiftum;
 			productReference = 80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */;
 			productType = "com.apple.product-type.framework";
@@ -187,7 +187,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80863FD11BD7864C00C3D182 /* LoremSwiftum-OSX */,
+				80863FD11BD7864C00C3D182 /* LoremSwiftum-Mac */,
 				802CD5B31A1E9F090067165F /* LoremSwiftum-iOS */,
 			);
 		};
@@ -431,7 +431,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80863FD71BD7864C00C3D182 /* Build configuration list for PBXNativeTarget "LoremSwiftum-OSX" */ = {
+		80863FD71BD7864C00C3D182 /* Build configuration list for PBXNativeTarget "LoremSwiftum-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80863FD81BD7864C00C3D182 /* Debug */,

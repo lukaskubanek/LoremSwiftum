@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "80863FD11BD7864C00C3D182"
                BuildableName = "LoremSwiftum.framework"
-               BlueprintName = "LoremSwiftum-OSX"
+               BlueprintName = "LoremSwiftum-Mac"
                ReferencedContainer = "container:LoremSwiftum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "80863FD11BD7864C00C3D182"
             BuildableName = "LoremSwiftum.framework"
-            BlueprintName = "LoremSwiftum-OSX"
+            BlueprintName = "LoremSwiftum-Mac"
             ReferencedContainer = "container:LoremSwiftum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "80863FD11BD7864C00C3D182"
             BuildableName = "LoremSwiftum.framework"
-            BlueprintName = "LoremSwiftum-OSX"
+            BlueprintName = "LoremSwiftum-Mac"
             ReferencedContainer = "container:LoremSwiftum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

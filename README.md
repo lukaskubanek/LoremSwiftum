@@ -16,7 +16,7 @@
 
 The easiest way to integrate this framework in your project is to use [Carthage](https://github.com/Carthage/Carthage/).
 
-1. Add `github "lukaskubanek/LoremSwiftum" ~> 1.0` to your `Cartfile`.
+1. Add `github "lukaskubanek/LoremSwiftum"` to your `Cartfile`.
 2. Run `carthage bootstrap`.
 3. Drag either the `LoremSwiftum.xcodeproj` or the `LoremSwiftum.framework` into your project/workspace and link your target against the `LoremSwiftum.framework`.
 4. Make sure the framework [gets copied](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) to your application bundle.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -11,13 +11,12 @@
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
-            buildForAnalyzing = "YES"
-            hideIssues = "NO">
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "80863FD11BD7864C00C3D182"
                BuildableName = "LoremSwiftum.framework"
-               BlueprintName = "LoremSwiftum-OSX"
+               BlueprintName = "LoremSwiftum-Mac"
                ReferencedContainer = "container:LoremSwiftum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "80863FD11BD7864C00C3D182"
             BuildableName = "LoremSwiftum.framework"
-            BlueprintName = "LoremSwiftum-OSX"
+            BlueprintName = "LoremSwiftum-Mac"
             ReferencedContainer = "container:LoremSwiftum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "80863FD11BD7864C00C3D182"
             BuildableName = "LoremSwiftum.framework"
-            BlueprintName = "LoremSwiftum-OSX"
+            BlueprintName = "LoremSwiftum-Mac"
             ReferencedContainer = "container:LoremSwiftum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

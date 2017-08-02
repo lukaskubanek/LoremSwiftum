@@ -28,3 +28,6 @@ DerivedData
 # Carthage
 Carthage/Checkouts
 Carthage/**/OrderedDictionary*
+
+# Swift Package
+.build

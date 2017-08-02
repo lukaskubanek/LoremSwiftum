@@ -10,6 +10,8 @@
 //            2014-2015 (c) Lukas Kubanek (http://lukaskubanek.com)
 //
 
+import Foundation
+
 open class Lorem {
     
     // ======================================================= //

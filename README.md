@@ -30,7 +30,7 @@ Another option is to use [Git submodules](http://git-scm.com/book/en/v2/Git-Tool
 
 ## Usage
 
-```
+```swift
 import LoremSwiftum
 
 Lorem.word

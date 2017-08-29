@@ -1,48 +1,37 @@
-//
-//        __                             _____         _ ______
-//       / /   ____  ________  ____ ___ / ___/      __(_) __/ /___  ______ ___
-//      / /   / __ \/ ___/ _ \/ __ `__ \\__ \ | /| / / / /_/ __/ / / / __ `__ \
-//     / /___/ /_/ / /  /  __/ / / / / /__/ / |/ |/ / / __/ /_/ /_/ / / / / / /
-//    /_____/\____/_/   \___/_/ /_/ /_/____/|__/|__/_/_/  \__/\__,_/_/ /_/ /_/
-//
-//                           LoremSwiftum.playground
-//                 http://github.com/lukaskubanek/LoremSwiftum
-//            2014-2015 (c) Lukas Kubanek (http://lukaskubanek.com)
-//
-
 import LoremSwiftum
 
-// ======================================================= //
-// Texts
-// ======================================================= //
+Lorem.word
+// => One random word
 
-let word = Lorem.word
-let words0 = Lorem.words(0)
-let words1 = Lorem.words(1)
-let words5 = Lorem.words(5)
+Lorem.words(3)
+// => Three random words
 
-let sentence = Lorem.sentence
-let sentences0 = Lorem.sentences(0)
-let sentences1 = Lorem.sentences(1)
-let sentences5 = Lorem.sentences(5)
+Lorem.sentence
+// => One random sentence
 
-let paragraph = Lorem.paragraph
-let paragraphs0 = Lorem.paragraphs(0)
-let paragraphs1 = Lorem.paragraphs(1)
-let paragraphs5 = Lorem.paragraphs(5)
+Lorem.sentences(3)
+// => Three random sentences
 
-let title = Lorem.title
+Lorem.paragraph
+// => One random paragraph
 
-// ======================================================= //
-// Misc Data
-// ======================================================= //
+Lorem.paragraphs(3)
+// => Three random paragraphs
 
-let name = Lorem.name
-let firstName = Lorem.firstName
-let lastName = Lorem.lastName
+Lorem.title
+// => A random title
 
-let email = Lorem.email
-let url = Lorem.URL
-let tweet = Lorem.tweet
+Lorem.firstName
+// => A random first name
 
-let date = Lorem.date
+Lorem.lastName
+// => A random last name
+
+Lorem.fullName
+// => A random full name
+
+Lorem.emailAddress
+// => A random email address
+
+Lorem.tweet
+// => A random tweet

@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.author       = { "Lukas Kubanek" => "lukas.kubanek@me.com" }
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
-  s.source       = { :git => "https://github.com/lukaskubanek/LoremSwiftum", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/lukaskubanek/LoremSwiftum.git", :tag => "v#{s.version}" }
   s.source_files = "Sources/**/*.swift"
 end

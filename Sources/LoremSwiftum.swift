@@ -83,7 +83,7 @@ public final class Lorem {
     
     /// Generates a full name.
     public static var fullName: String {
-        return "\(firstName) \(lastName))"
+        return "\(firstName) \(lastName)"
     }
     
     /// Generates an email address.

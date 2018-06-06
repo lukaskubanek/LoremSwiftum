@@ -168,7 +168,7 @@
 					};
 					80863FD11BD7864C00C3D182 = {
 						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -297,6 +297,7 @@
 				PRODUCT_NAME = LoremSwiftum;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -320,6 +321,7 @@
 				PRODUCT_NAME = LoremSwiftum;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

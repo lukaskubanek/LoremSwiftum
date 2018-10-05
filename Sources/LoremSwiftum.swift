@@ -93,7 +93,7 @@ public final class Lorem {
     
     /// Generates a URL.
     public static var url: String {
-        return "\(urlScheme)://\(urlDomains.random)"
+        return "\(urlSchemes.random)://\(urlDomains.random)"
     }
     
     /// Generates a random tweet which is shorter than 140 characters.
@@ -168,7 +168,7 @@ fileprivate extension Lorem {
     
     fileprivate static let emailDelimiters = ["", ".", "-", "_"]
     
-    fileprivate static let urlScheme = "http"
+    fileprivate static let urlSchemes = "http https".components(separatedBy: " ")
     
     fileprivate static let urlDomains = "twitter.com google.com youtube.com wordpress.org adobe.com blogspot.com godaddy.com wikipedia.org wordpress.com yahoo.com linkedin.com amazon.com flickr.com w3.org apple.com myspace.com tumblr.com digg.com microsoft.com vimeo.com pinterest.com qq.com stumbleupon.com youtu.be addthis.com miibeian.gov.cn delicious.com baidu.com feedburner.com bit.ly".components(separatedBy: " ")
     

@@ -67,7 +67,10 @@ Lorem.emailAddress
 // => A random email address
 
 Lorem.tweet
-// => A random tweet
+// => A random 140 character-long tweet
+
+Lorem.longTweet
+// => A random 280 character-long tweet
 ```
 
 ## Author

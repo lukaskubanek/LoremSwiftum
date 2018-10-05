@@ -116,6 +116,26 @@ public final class Lorem {
         return tweet
     }
     
+    /// Generates a random tweet which is shorter than 140 characters.
+    public static var longTweet: String {
+        var tweet = ""
+        
+        while tweet.count < longTweetLength {
+            tweet += paragraph
+        }
+        
+        tweet = String(tweet.prefix(longTweetLength - 1))
+        tweet = tweet.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
+        if let lastCharacter = tweet.last {
+            if String(lastCharacter) != Separator.dot.rawValue {
+                tweet += Separator.dot.rawValue
+            }
+        }
+        
+        return tweet
+    }
+    
 }
 
 fileprivate extension Lorem {
@@ -173,6 +193,7 @@ fileprivate extension Lorem {
     fileprivate static let urlDomains = "twitter.com google.com youtube.com wordpress.org adobe.com blogspot.com godaddy.com wikipedia.org wordpress.com yahoo.com linkedin.com amazon.com flickr.com w3.org apple.com myspace.com tumblr.com digg.com microsoft.com vimeo.com pinterest.com qq.com stumbleupon.com youtu.be addthis.com miibeian.gov.cn delicious.com baidu.com feedburner.com bit.ly".components(separatedBy: " ")
     
     fileprivate static let tweetLength = 140
+    fileprivate static let longTweetLength = 280
     
 }
 

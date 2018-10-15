@@ -5,7 +5,7 @@ public final class Lorem {
     
     /// Generates a single word.
     public static var word: String {
-        return allWords.random
+        return allWords.randomElement()!
     }
     
     /// Generates multiple words whose count is defined by the given value.
@@ -23,8 +23,7 @@ public final class Lorem {
     /// Generates a single sentence.
     public static var sentence: String {
         let numberOfWords = Int.random(
-            min: minWordsCountInSentence,
-            max: maxWordsCountInSentence
+            in: minWordsCountInSentence...maxWordsCountInSentence
         )
         
         return _compose(
@@ -51,8 +50,7 @@ public final class Lorem {
     /// Generates a single paragraph.
     public static var paragraph: String {
         let numberOfSentences = Int.random(
-            min: minSentencesCountInParagraph,
-            max: maxSentencesCountInParagraph
+            in: minSentencesCountInParagraph...maxSentencesCountInParagraph
         )
         
         return _compose(
@@ -77,8 +75,7 @@ public final class Lorem {
     /// Generates a single capitalized title.
     public static var title: String {
         let numberOfWords = Int.random(
-            min: minWordsCountInTitle,
-            max: maxWordsCountInTitle
+            in: minWordsCountInTitle...maxWordsCountInTitle
         )
         
         return _compose(
@@ -91,12 +88,12 @@ public final class Lorem {
     
     /// Generates a first name.
     public static var firstName: String {
-        return firstNames.random
+        return firstNames.randomElement()!
     }
     
     /// Generates a last name.
     public static var lastName: String {
-        return lastNames.random
+        return lastNames.randomElement()!
     }
     
     /// Generates a full name.
@@ -106,12 +103,16 @@ public final class Lorem {
     
     /// Generates an email address.
     public static var emailAddress: String {
-        return "\(firstName)\(emailDelimiters.random)\(lastName)@\(emailDomains.random)".lowercased()
+        let emailDelimiter = emailDelimiters.randomElement()!
+        let emailDomain = emailDomains.randomElement()!
+        
+        return "\(firstName)\(emailDelimiter)\(lastName)@\(emailDomain)".lowercased()
     }
     
     /// Generates a URL.
     public static var url: String {
-        return "\(urlScheme)://\(urlDomains.random)"
+        let urlDomain = urlDomains.randomElement()!
+        return "\(urlScheme)://\(urlDomain)"
     }
     
     /// Generates a random tweet which is shorter than 140 characters.
@@ -193,25 +194,6 @@ fileprivate extension Lorem {
     fileprivate static let urlDomains = "twitter.com google.com youtube.com wordpress.org adobe.com blogspot.com godaddy.com wikipedia.org wordpress.com yahoo.com linkedin.com amazon.com flickr.com w3.org apple.com myspace.com tumblr.com digg.com microsoft.com vimeo.com pinterest.com qq.com stumbleupon.com youtu.be addthis.com miibeian.gov.cn delicious.com baidu.com feedburner.com bit.ly".components(separatedBy: " ")
     
     fileprivate static let tweetLength = 140
-    
-}
-
-fileprivate extension Array {
-    
-    fileprivate var random: Element {
-        precondition(!isEmpty)
-        return self[Int.random(max: count - 1)]
-    }
-    
-}
-
-    
-fileprivate extension Int {
-    
-    fileprivate static func random(min: Int = 0, max: Int) -> Int {
-        precondition(min >= 0 && min < max)
-        return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
-    }
     
 }
 

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		80175E571F556EF4009DC804 /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80175E561F556EF4009DC804 /* LoremSwiftum.swift */; };
-		802CD5CE1A1E9F690067165F /* LoremSwiftum.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80863FDF1BD786A300C3D182 /* LoremSwiftum.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80CB484D1F55727400844DFB /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80175E561F556EF4009DC804 /* LoremSwiftum.swift */; };
 /* End PBXBuildFile section */
 
@@ -18,7 +16,6 @@
 		802CD5B41A1E9F090067165F /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		808384011BAAB2440075603A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremSwiftum.h; sourceTree = "<group>"; };
 		80DF350F1BF8F04A004F17C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		80DF35121BF8F082004F17C5 /* LoremSwiftum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoremSwiftum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -88,7 +85,6 @@
 		80B67B4219E5603D00D2DEC2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				80B67B4419E5603D00D2DEC2 /* LoremSwiftum.h */,
 				80175E561F556EF4009DC804 /* LoremSwiftum.swift */,
 			);
 			path = Sources;
@@ -101,7 +97,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802CD5CE1A1E9F690067165F /* LoremSwiftum.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +104,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80863FDF1BD786A300C3D182 /* LoremSwiftum.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

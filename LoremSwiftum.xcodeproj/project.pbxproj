@@ -14,6 +14,8 @@
 /* Begin PBXFileReference section */
 		80175E561F556EF4009DC804 /* LoremSwiftum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
 		802CD5B41A1E9F090067165F /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8032D7F821749C85000EDF25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8032D7F921749C85000EDF25 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		808384011BAAB2440075603A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DF350F1BF8F04A004F17C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -65,6 +67,8 @@
 		8094BE5919E5521A00CBE5A0 = {
 			isa = PBXGroup;
 			children = (
+				8032D7F821749C85000EDF25 /* README.md */,
+				8032D7F921749C85000EDF25 /* LICENSE.md */,
 				80B67B4219E5603D00D2DEC2 /* Sources */,
 				802CD5CF1A1EA1A80067165F /* Playgrounds */,
 				808383FF1BAAB2440075603A /* Supporting Files */,

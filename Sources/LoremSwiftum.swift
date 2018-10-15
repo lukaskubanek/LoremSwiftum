@@ -3,6 +3,10 @@ import Foundation
 /// A lightweight lorem ipsum generator.
 public final class Lorem {
     
+    // ======================================================= //
+    // MARK: - Text
+    // ======================================================= //
+    
     /// Generates a single word.
     public static var word: String {
         return allWords.randomElement()!
@@ -86,6 +90,10 @@ public final class Lorem {
         )
     }
     
+    // ======================================================= //
+    // MARK: - Names
+    // ======================================================= //
+    
     /// Generates a first name.
     public static var firstName: String {
         return firstNames.randomElement()!
@@ -101,6 +109,10 @@ public final class Lorem {
         return "\(firstName) \(lastName)"
     }
     
+    // ======================================================= //
+    // MARK: - Email Addresses & URLs
+    // ======================================================= //
+    
     /// Generates an email address.
     public static var emailAddress: String {
         let emailDelimiter = emailDelimiters.randomElement()!
@@ -115,24 +127,18 @@ public final class Lorem {
         return "\(urlScheme)://\(urlDomain)"
     }
     
+    // ======================================================= //
+    // MARK: - Tweets
+    // ======================================================= //
+    
     /// Generates a random tweet which is shorter than 140 characters.
+    public static var shortTweet: String {
+        return _composeTweet(shortTweetMaxLength)
+    }
+    
+    /// Generates a random tweet which is shorter than 280 characters.
     public static var tweet: String {
-        var tweet = ""
-        
-        while tweet.count < tweetLength {
-            tweet += paragraph
-        }
-        
-        tweet = String(tweet.prefix(tweetLength - 1))
-        tweet = tweet.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        
-        if let lastCharacter = tweet.last {
-            if String(lastCharacter) != Separator.dot.rawValue {
-                tweet += Separator.dot.rawValue
-            }
-        }
-        
-        return tweet
+        return _composeTweet(longTweetMaxLength)
     }
     
 }
@@ -172,12 +178,25 @@ fileprivate extension Lorem {
         return string
     }
     
+    fileprivate static func _composeTweet(_ maxLength: Int) -> String {
+        for numberOfSentences in [4, 3, 2, 1] {
+            let tweet = sentences(numberOfSentences)
+            if tweet.count < maxLength {
+                return tweet
+            }
+        }
+        
+        return ""
+    }
+    
     fileprivate static let minWordsCountInSentence = 4
     fileprivate static let maxWordsCountInSentence = 16
     fileprivate static let minSentencesCountInParagraph = 3
     fileprivate static let maxSentencesCountInParagraph = 9
     fileprivate static let minWordsCountInTitle = 2
     fileprivate static let maxWordsCountInTitle = 7
+    fileprivate static let shortTweetMaxLength = 140
+    fileprivate static let longTweetMaxLength = 280
     
     fileprivate static let allWords = ["alias", "consequatur", "aut", "perferendis", "sit", "voluptatem", "accusantium", "doloremque", "aperiam", "eaque", "ipsa", "quae", "ab", "illo", "inventore", "veritatis", "et", "quasi", "architecto", "beatae", "vitae", "dicta", "sunt", "explicabo", "aspernatur", "aut", "odit", "aut", "fugit", "sed", "quia", "consequuntur", "magni", "dolores", "eos", "qui", "ratione", "voluptatem", "sequi", "nesciunt", "neque", "dolorem", "ipsum", "quia", "dolor", "sit", "amet", "consectetur", "adipisci", "velit", "sed", "quia", "non", "numquam", "eius", "modi", "tempora", "incidunt", "ut", "labore", "et", "dolore", "magnam", "aliquam", "quaerat", "voluptatem", "ut", "enim", "ad", "minima", "veniam", "quis", "nostrum", "exercitationem", "ullam", "corporis", "nemo", "enim", "ipsam", "voluptatem", "quia", "voluptas", "sit", "suscipit", "laboriosam", "nisi", "ut", "aliquid", "ex", "ea", "commodi", "consequatur", "quis", "autem", "vel", "eum", "iure", "reprehenderit", "qui", "in", "ea", "voluptate", "velit", "esse", "quam", "nihil", "molestiae", "et", "iusto", "odio", "dignissimos", "ducimus", "qui", "blanditiis", "praesentium", "laudantium", "totam", "rem", "voluptatum", "deleniti", "atque", "corrupti", "quos", "dolores", "et", "quas", "molestias", "excepturi", "sint", "occaecati", "cupiditate", "non", "provident", "sed", "ut", "perspiciatis", "unde", "omnis", "iste", "natus", "error", "similique", "sunt", "in", "culpa", "qui", "officia", "deserunt", "mollitia", "animi", "id", "est", "laborum", "et", "dolorum", "fuga", "et", "harum", "quidem", "rerum", "facilis", "est", "et", "expedita", "distinctio", "nam", "libero", "tempore", "cum", "soluta", "nobis", "est", "eligendi", "optio", "cumque", "nihil", "impedit", "quo", "porro", "quisquam", "est", "qui", "minus", "id", "quod", "maxime", "placeat", "facere", "possimus", "omnis", "voluptas", "assumenda", "est", "omnis", "dolor", "repellendus", "temporibus", "autem", "quibusdam", "et", "aut", "consequatur", "vel", "illum", "qui", "dolorem", "eum", "fugiat", "quo", "voluptas", "nulla", "pariatur", "at", "vero", "eos", "et", "accusamus", "officiis", "debitis", "aut", "rerum", "necessitatibus", "saepe", "eveniet", "ut", "et", "voluptates", "repudiandae", "sint", "et", "molestiae", "non", "recusandae", "itaque", "earum", "rerum", "hic", "tenetur", "a", "sapiente", "delectus", "ut", "aut", "reiciendis", "voluptatibus", "maiores", "doloribus", "asperiores", "repellat"]
 
@@ -192,8 +211,6 @@ fileprivate extension Lorem {
     fileprivate static let urlScheme = "http"
     
     fileprivate static let urlDomains = ["twitter.com", "google.com", "youtube.com", "wordpress.org", "adobe.com", "blogspot.com", "godaddy.com", "wikipedia.org", "wordpress.com", "yahoo.com", "linkedin.com", "amazon.com", "flickr.com", "w3.org", "apple.com", "myspace.com", "tumblr.com", "digg.com", "microsoft.com", "vimeo.com", "pinterest.com", "qq.com", "stumbleupon.com", "youtu.be", "addthis.com", "miibeian.gov.cn", "delicious.com", "baidu.com", "feedburner.com", "bit.ly"]
-    
-    fileprivate static let tweetLength = 140
     
 }
 

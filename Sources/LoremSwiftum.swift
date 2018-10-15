@@ -72,7 +72,7 @@ public final class Lorem {
         )
     }
     
-    /// Generates a single capitalized title.
+    /// Generates a capitalized title.
     public static var title: String {
         let numberOfWords = Int.random(
             in: minWordsCountInTitle...maxWordsCountInTitle
@@ -201,7 +201,7 @@ fileprivate extension String {
     
     fileprivate var firstLetterCapitalized: String {
         guard !isEmpty else { return self }
-        return self[startIndex...startIndex].uppercased() + self[index(after: startIndex)..<endIndex]
+        return prefix(1).capitalized + dropFirst()
     }
     
 }

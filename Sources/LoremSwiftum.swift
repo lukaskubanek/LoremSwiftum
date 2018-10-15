@@ -1,6 +1,6 @@
 import Foundation
 
-/// A leightweight lorem ipsum generator.
+/// A lightweight lorem ipsum generator.
 public final class Lorem {
     
     /// Generates a single word.
@@ -13,21 +13,27 @@ public final class Lorem {
     /// - Parameter count: The number of words to generate.
     /// - Returns: The generated words joined by a space character.
     public static func words(_ count: Int) -> String {
-        return compose({ word },
-                       count: count,
-                       joinBy: .space)
+        return _compose(
+            word,
+            count: count,
+            joinBy: .space
+        )
     }
     
     /// Generates a single sentence.
     public static var sentence: String {
-        let numberOfWords = Int.random(min: minWordsCountInSentence,
-                                       max: maxWordsCountInSentence)
+        let numberOfWords = Int.random(
+            min: minWordsCountInSentence,
+            max: maxWordsCountInSentence
+        )
         
-        return compose({ word },
-                       count: numberOfWords,
-                       joinBy: .space,
-                       endWith: .dot,
-                       decorate: { $0.firstLetterCapitalized() })
+        return _compose(
+            word,
+            count: numberOfWords,
+            joinBy: .space,
+            endWith: .dot,
+            decorate: { $0.firstLetterCapitalized }
+        )
     }
     
     /// Generates multiple sentences whose count is defined by the given value.
@@ -35,40 +41,52 @@ public final class Lorem {
     /// - Parameter count: The number of sentences to generate.
     /// - Returns: The generated sentences joined by a space character.
     public static func sentences(_ count: Int) -> String {
-        return compose({ sentence },
-                       count: count,
-                       joinBy: .space)
+        return _compose(
+            sentence,
+            count: count,
+            joinBy: .space
+        )
     }
     
     /// Generates a single paragraph.
     public static var paragraph: String {
-        let numberOfSentences = Int.random(min: minSentencesCountInParagraph,
-                                           max: maxSentencesCountInParagraph)
+        let numberOfSentences = Int.random(
+            min: minSentencesCountInParagraph,
+            max: maxSentencesCountInParagraph
+        )
         
-        return compose({ sentence },
-                       count: numberOfSentences,
-                       joinBy: .space)
+        return _compose(
+            sentence,
+            count: numberOfSentences,
+            joinBy: .space
+        )
     }
     
     /// Generates multiple paragraphs whose count is defined by the given value.
     ///
     /// - Parameter count: The number of paragraphs to generate.
-    /// - Returns: The generated paragraphs joined by a space character.
+    /// - Returns: The generated paragraphs joined by a new line character.
     public static func paragraphs(_ count: Int) -> String {
-        return compose({ paragraph },
-                       count: count,
-                       joinBy: .newLine)
+        return _compose(
+            paragraph,
+            count: count,
+            joinBy: .newLine
+        )
     }
     
-    /// Generates a single title.
+    /// Generates a single capitalized title.
     public static var title: String {
-        let numberOfWords = Int.random(min: minWordsCountInTitle,
-                                       max: maxWordsCountInTitle)
+        let numberOfWords = Int.random(
+            min: minWordsCountInTitle,
+            max: maxWordsCountInTitle
+        )
         
-        return compose({ word },
-                       count: numberOfWords,
-                       joinBy: .space,
-                       decorate: { $0.capitalized })
+        return _compose(
+            word,
+            count: numberOfWords,
+            joinBy: .space,
+            decorate: { $0.capitalized }
+        )
     }
     
     /// Generates a first name.
@@ -127,11 +145,13 @@ fileprivate extension Lorem {
         case newLine = "\n"
     }
     
-    fileprivate static func compose(_ provider: () -> String,
-                                    count: Int,
-                                    joinBy middleSeparator: Separator,
-                                    endWith endSeparator: Separator = .none,
-                                    decorate decorator: ((String) -> String)? = nil) -> String {
+    fileprivate static func _compose(
+        _ provider: @autoclosure () -> String,
+        count: Int,
+        joinBy middleSeparator: Separator,
+        endWith endSeparator: Separator = .none,
+        decorate decorator: ((String) -> String)? = nil
+    ) -> String {
         var string = ""
         
         for index in 0..<count {
@@ -197,7 +217,7 @@ fileprivate extension Int {
 
 fileprivate extension String {
     
-    fileprivate func firstLetterCapitalized() -> String {
+    fileprivate var firstLetterCapitalized: String {
         guard !isEmpty else { return self }
         return self[startIndex...startIndex].uppercased() + self[index(after: startIndex)..<endIndex]
     }

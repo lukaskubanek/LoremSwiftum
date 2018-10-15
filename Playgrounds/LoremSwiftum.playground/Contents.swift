@@ -33,6 +33,9 @@ Lorem.fullName
 Lorem.emailAddress
 // => A random email address
 
+Lorem.url
+// => A random URL
+
 Lorem.shortTweet
 // => A random short tweet
 

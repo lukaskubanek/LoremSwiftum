@@ -24,11 +24,19 @@ public final class Lorem {
         )
     }
     
-    /// Generates multiple words whose count is within the given range.
+    /// Generates multiple words whose count is randomly selected from within the given range.
     ///
     /// - Parameter range: The range of number of words to generate.
     /// - Returns: The generated words joined by a space character.
     public static func words(_ range: Range<Int>) -> String {
+        return _compose(word, count: Int.random(in: range), joinBy: .space)
+    }
+    
+    /// Generates multiple words whose count is randomly selected from within the given closed range.
+    ///
+    /// - Parameter range: The range of number of words to generate.
+    /// - Returns: The generated words joined by a space character.
+    public static func words(_ range: ClosedRange<Int>) -> String {
         return _compose(word, count: Int.random(in: range), joinBy: .space)
     }
     
@@ -59,6 +67,22 @@ public final class Lorem {
         )
     }
     
+    /// Generates multiple sentences whose count is selected from within the given range.
+    ///
+    /// - Parameter count: The number of sentences to generate.
+    /// - Returns: The generated sentences joined by a space character.
+    public static func sentences(_ range: Range<Int>) -> String {
+        return _compose(sentence, count: Int.random(in: range), joinBy: .space)
+    }
+    
+    /// Generates multiple sentences whose count is selected from within the given closed range.
+    ///
+    /// - Parameter count: The number of sentences to generate.
+    /// - Returns: The generated sentences joined by a space character.
+    public static func sentences(_ range: ClosedRange<Int>) -> String {
+        return _compose(sentence, count: Int.random(in: range), joinBy: .space)
+    }
+    
     /// Generates a single paragraph.
     public static var paragraph: String {
         let numberOfSentences = Int.random(
@@ -80,6 +104,30 @@ public final class Lorem {
         return _compose(
             paragraph,
             count: count,
+            joinBy: .newLine
+        )
+    }
+    
+    /// Generates multiple paragraphs whose count is selected from within the given range.
+    ///
+    /// - Parameter count: The number of paragraphs to generate.
+    /// - Returns: The generated paragraphs joined by a new line character.
+    public static func paragraphs(_ range: Range<Int>) -> String {
+        return _compose(
+            paragraph,
+            count: Int.random(in: range),
+            joinBy: .newLine
+        )
+    }
+    
+    /// Generates multiple paragraphs whose count is selected from within the given closed range.
+    ///
+    /// - Parameter count: The number of paragraphs to generate.
+    /// - Returns: The generated paragraphs joined by a new line character.
+    public static func paragraphs(_ range: ClosedRange<Int>) -> String {
+        return _compose(
+            paragraph,
+            count: Int.random(in: range),
             joinBy: .newLine
         )
     }

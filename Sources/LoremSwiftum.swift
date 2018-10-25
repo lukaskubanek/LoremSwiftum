@@ -24,6 +24,14 @@ public final class Lorem {
         )
     }
     
+    /// Generates multiple words whose count is within the given range.
+    ///
+    /// - Parameter range: The range of number of words to generate.
+    /// - Returns: The generated words joined by a space character.
+    public static func words(_ range: Range<Int>) -> String {
+        return _compose(word, count: Int.random(in: range), joinBy: .space)
+    }
+    
     /// Generates a single sentence.
     public static var sentence: String {
         let numberOfWords = Int.random(

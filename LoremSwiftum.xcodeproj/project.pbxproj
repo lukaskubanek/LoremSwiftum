@@ -296,7 +296,6 @@
 				PRODUCT_NAME = LoremSwiftum;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -320,7 +319,6 @@
 				PRODUCT_NAME = LoremSwiftum;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

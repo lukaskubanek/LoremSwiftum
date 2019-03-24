@@ -157,7 +157,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Lukas Kubanek";
 				TargetAttributes = {
 					802CD5B31A1E9F090067165F = {
@@ -172,10 +172,11 @@
 			};
 			buildConfigurationList = 8094BE5D19E5521A00CBE5A0 /* Build configuration list for PBXProject "LoremSwiftum" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8094BE5919E5521A00CBE5A0;
 			productRefGroup = 8094BE6419E5521A00CBE5A0 /* Products */;

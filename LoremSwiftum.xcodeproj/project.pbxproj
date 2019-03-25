@@ -166,7 +166,7 @@
 					};
 					80863FD11BD7864C00C3D182 = {
 						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};

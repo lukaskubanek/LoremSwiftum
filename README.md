@@ -1,12 +1,12 @@
 # LoremSwiftum
 
-[![](https://img.shields.io/badge/release-v2.0.0-blue.svg?style=flat-square)](https://github.com/lukaskubanek/LoremSwiftum/releases) [![](https://img.shields.io/badge/Swift-4.0+-orange.svg?style=flat-square)](https://developer.apple.com/swift/ "Swift 4.0+") ![](https://img.shields.io/badge/platform-macOS/iOS-yellowgreen.svg?style=flat-square "Platform: macOS/iOS") [![](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square "Carthage compatible")](https://github.com/Carthage/Carthage) [![](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square "License: MIT")](LICENSE.md)
+[![](https://img.shields.io/badge/release-v2.1.0-blue.svg?style=flat-square)](https://github.com/lukaskubanek/LoremSwiftum/releases) [![](https://img.shields.io/badge/Swift-4.0+-orange.svg?style=flat-square)](https://developer.apple.com/swift/ "Swift 4.0+") ![](https://img.shields.io/badge/platform-macOS/iOS-yellowgreen.svg?style=flat-square "Platform: macOS/iOS") [![](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square "Carthage compatible")](https://github.com/Carthage/Carthage) [![](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square "License: MIT")](LICENSE.md)
 
 **LoremSwiftum** is a lightweight lorem ipsum generator for iOS and macOS written in Swift. It supports generating following random texts: words, sentences, paragraphs, titles, names, email addresses, URLs and tweets. Originally, this library was created as a Swift port of [LoremIpsum](https://github.com/lukaskubanek/LoremIpsum) written in Objective-C.
 
 ## Requirements
 
-- Swift 4.0-4.2
+- Swift 4.0, 4.2, 5.0
 - Xcode 9.2+
 - iOS 8.0+ / OS X 10.10+
 

@@ -8,11 +8,15 @@
 
 - Swift 4.0, 4.2, 5.0
 - Xcode 9.2+
-- iOS 8.0+ / OS X 10.10+
+- iOS 8.0+ / tvOS 8.0+ / watchOS / OS X 10.10+
 
 ## Installation
 
 The library is distributed as a Swift framework and can be integrated into your project in following ways:
+
+#### Swift Package Manager
+
+If you use Xcode11+, then go ahead and add URL of this repository as a Package dependency.
 
 #### Carthage
 

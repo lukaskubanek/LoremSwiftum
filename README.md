@@ -8,7 +8,7 @@
 
 - Swift 4.0, 4.2, 5.0
 - Xcode 9.2+
-- iOS 8.0+ / tvOS 8.0+ / watchOS / OS X 10.10+
+- iOS 8.0+ / tvOS 9.0+ / watchOS 2.0+ / OS X 10.10+
 
 ## Installation
 

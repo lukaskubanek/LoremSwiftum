@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80054402242CC8A70001EE1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80054401242CC8A70001EE1B /* Foundation.framework */; };
+		80054403242CC8BD0001EE1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80054401242CC8A70001EE1B /* Foundation.framework */; };
 		80175E571F556EF4009DC804 /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80175E561F556EF4009DC804 /* LoremSwiftum.swift */; };
 		80CB484D1F55727400844DFB /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80175E561F556EF4009DC804 /* LoremSwiftum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80054401242CC8A70001EE1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		80175E561F556EF4009DC804 /* LoremSwiftum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
 		802CD5B41A1E9F090067165F /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8032D7F821749C85000EDF25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8032D7F921749C85000EDF25 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		808384011BAAB2440075603A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80DF350F1BF8F04A004F17C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		80DF35121BF8F082004F17C5 /* LoremSwiftum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoremSwiftum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80054403242CC8BD0001EE1B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,26 +37,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80054402242CC8A70001EE1B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80054400242CC8990001EE1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80054401242CC8A70001EE1B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		802CD5CF1A1EA1A80067165F /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
 				80DF35121BF8F082004F17C5 /* LoremSwiftum.playground */,
 			);
 			path = Playgrounds;
-			sourceTree = "<group>";
-		};
-		80425AFD1AF5FEB40030E6C3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				80DF350F1BF8F04A004F17C5 /* Foundation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		808383FF1BAAB2440075603A /* Supporting Files */ = {
@@ -72,7 +76,7 @@
 				80B67B4219E5603D00D2DEC2 /* Sources */,
 				802CD5CF1A1EA1A80067165F /* Playgrounds */,
 				808383FF1BAAB2440075603A /* Supporting Files */,
-				80425AFD1AF5FEB40030E6C3 /* Frameworks */,
+				80054400242CC8990001EE1B /* Frameworks */,
 				8094BE6419E5521A00CBE5A0 /* Products */,
 			);
 			sourceTree = "<group>";

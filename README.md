@@ -1,32 +1,65 @@
 # LoremSwiftum
 
-[![](https://img.shields.io/badge/release-v2.1.0-blue.svg?style=flat-square)](https://github.com/lukaskubanek/LoremSwiftum/releases) [![](https://img.shields.io/badge/Swift-4.0+-orange.svg?style=flat-square)](https://developer.apple.com/swift/ "Swift 4.0+") ![](https://img.shields.io/badge/platform-macOS/iOS-yellowgreen.svg?style=flat-square "Platform: macOS/iOS") [![](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square "Carthage compatible")](https://github.com/Carthage/Carthage) [![](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square "License: MIT")](LICENSE.md)
+<p align="left">
+	<a href="https://github.com/lukaskubanek/LoremSwiftum/releases">
+		<img src="https://img.shields.io/github/release/lukaskubanek/LoremSwiftum/all.svg?style=flat-square">
+	</a>
+	<a href="https://developer.apple.com/swift">
+        <img src="https://img.shields.io/badge/Swift-4.0+-orange.svg?style=flat-square" alt="Swift 4.0+">
+    </a>
+    <a href="https://swift.org/package-manager">
+        <img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat-square" alt="Swift Package Manager">
+    </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat-square" alt="Carthage">
+    </a>
+    <a href="LICENSE.md">
+        <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square" alt="License: MIT">
+    </a>
+    <a href="https://twitter.com/lukaskubanek">
+        <img src="https://img.shields.io/badge/contact-@lukaskubanek-olive.svg?style=flat-square" alt="Contact: @lukaskubanek">
+    </a>
+</p>
 
-**LoremSwiftum** is a lightweight lorem ipsum generator for iOS and macOS written in Swift. It supports generating following random texts: words, sentences, paragraphs, titles, names, email addresses, URLs and tweets. Originally, this library was created as a Swift port of [LoremIpsum](https://github.com/lukaskubanek/LoremIpsum) written in Objective-C.
+LoremSwiftum is a lightweight lorem ipsum generator library for Swift. It supports generating random words, sentences, paragraphs, titles, names, email addresses, URLs, and tweets. Initially, this library was created as a Swift port of [LoremIpsum](https://github.com/lukaskubanek/LoremIpsum) written in Objective-C.
 
 ## Requirements
 
-- Swift 4.0, 4.2, 5.0
+- Swift 4.0+
 - Xcode 9.2+
-- iOS 8.0+ / OS X 10.10+
+- iOS 8.0+ / macOS 10.10+
+
+*The Xcode and OS requirements apply only when the library is integrated via an Xcode project or framework.*
 
 ## Installation
 
-The library is distributed as a Swift framework and can be integrated into your project in following ways:
+### Swift Package Manager
 
-#### Carthage
+To install LoremSwiftum using the [Swift Package Manager](https://swift.org/package-manager/), add it as a dependency into your `Package.swift` file:
 
-If you use [Carthage](https://github.com/Carthage/Carthage) for managing your dependencies, put LoremSwiftum into your `Cartfile`:
+```swift
+let package = Package(
+    ...
+    dependencies: [
+        .package(url: "https://github.com/lukaskubanek/LoremSwiftum.git", from: "2.0.0")
+    ],
+    ...
+)
+```
+
+### Carthage
+
+To install LoremSwiftum using [Carthage](https://github.com/Carthage/Carthage), add it as a dependency into your `Cartfile`:
 
 ```plain
 github "lukaskubanek/LoremSwiftum"
 ```
 
-Then, drag either the `LoremSwiftum.xcodeproj` or the `LoremSwiftum.framework` into your project/workspace and link your target against the `LoremSwiftum.framework`. Also make sure that the framework [gets copied](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) to your application bundle.
+Then drag either the `LoremSwiftum.xcodeproj` or the `LoremSwiftum.framework` into your Xcode project/workspace and link your target against the `LoremSwiftum.framework`. Make sure that the framework [gets copied](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) to your application bundle.
 
-#### Git Submodules
+### Git Submodules
 
-Yet another option is using [Git submodules](http://git-scm.com/book/en/v2/Git-Tools-Submodules) and integrating the Xcode project `LoremSwiftum.xcodeproj` from the submodule directly to your Xcode workspace.
+You can also install LoremSwiftum via [Git submodules](http://git-scm.com/book/en/v2/Git-Tools-Submodules) and integrate the project `LoremSwiftum.xcodeproj` from the submodule directly into your Xcode workspace.
 
 ## Usage
 
@@ -75,11 +108,3 @@ Lorem.shortTweet
 Lorem.tweet
 // => A random long tweet
 ```
-
-## Author
-
-Lukas Kubanek // [lukaskubanek.com](http://lukaskubanek.com) // [@kubanekl](https://twitter.com/kubanekl)
-
-## License
-
-**LoremSwiftum** is released under the [MIT License](LICENSE.md).

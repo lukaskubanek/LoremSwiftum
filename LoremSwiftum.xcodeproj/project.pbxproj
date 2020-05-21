@@ -22,6 +22,7 @@
 		808384011BAAB2440075603A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80863FD21BD7864C00C3D182 /* LoremSwiftum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoremSwiftum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8094DC8724767FD5003F302A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		8094DC8824768C72003F302A /* Package@swift-4.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Package@swift-4.2.swift"; sourceTree = "<group>"; };
 		80DF35121BF8F082004F17C5 /* LoremSwiftum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoremSwiftum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -75,6 +76,7 @@
 				8032D7F821749C85000EDF25 /* README.md */,
 				8032D7F921749C85000EDF25 /* LICENSE.md */,
 				8094DC8724767FD5003F302A /* Package.swift */,
+				8094DC8824768C72003F302A /* Package@swift-4.2.swift */,
 				80B67B4219E5603D00D2DEC2 /* Sources */,
 				802CD5CF1A1EA1A80067165F /* Playgrounds */,
 				808383FF1BAAB2440075603A /* Supporting Files */,

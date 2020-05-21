@@ -17,7 +17,7 @@
         <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square" alt="License: MIT">
     </a>
     <a href="https://twitter.com/lukaskubanek">
-        <img src="https://img.shields.io/badge/contact-@lukaskubanek-olive.svg?style=flat-square" alt="Contact: @lukaskubanek">
+        <img src="https://img.shields.io/badge/contact-@lukaskubanek-olive.svg?style=flat-square" alt="Twitter: @lukaskubanek">
     </a>
 </p>
 
@@ -29,7 +29,7 @@ LoremSwiftum is a lightweight lorem ipsum generator library for Swift. It suppor
 - Xcode 9.2+
 - iOS 8.0+ / macOS 10.10+
 
-*The Xcode and OS requirements apply only when the library is integrated via an Xcode project or framework.*
+*The Xcode and OS requirements apply only when the library is integrated as a framework or via the Xcode project.*
 
 ## Installation
 

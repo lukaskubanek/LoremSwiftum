@@ -1,30 +1,11 @@
-# OS X
+# SPM
+.build
+.swiftpm
+
+# Xcode
+xcuserdata/
+
+# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Ruby
-.ruby-*
-.rbenv-*
-
-# Xcode
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-*.xctimeline
-
-# Carthage
-Carthage/Checkouts
-Carthage/**/OrderedDictionary*

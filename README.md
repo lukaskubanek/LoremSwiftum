@@ -41,7 +41,7 @@ To install LoremSwiftum using the [Swift Package Manager](https://swift.org/pack
 let package = Package(
     ...
     dependencies: [
-        .package(url: "https://github.com/lukaskubanek/LoremSwiftum.git", from: "2.2.0")
+        .package(url: "https://github.com/lukaskubanek/LoremSwiftum.git", from: "2.2.1")
     ],
     ...
 )

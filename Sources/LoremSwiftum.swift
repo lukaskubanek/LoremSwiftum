@@ -99,36 +99,36 @@ public final class Lorem {
     /// Generates multiple paragraphs whose count is defined by the given value.
     ///
     /// - Parameter count: The number of paragraphs to generate.
-    /// - Returns: The generated paragraphs joined by a new line character.
+    /// - Returns: The generated paragraphs joined by two new line characters.
     public static func paragraphs(_ count: Int) -> String {
         return _compose(
             paragraph,
             count: count,
-            joinBy: .newLine
+            joinBy: .doubleNewLine
         )
     }
     
     /// Generates multiple paragraphs whose count is selected from within the given range.
     ///
     /// - Parameter count: The number of paragraphs to generate.
-    /// - Returns: The generated paragraphs joined by a new line character.
+    /// - Returns: The generated paragraphs joined by two new line characters.
     public static func paragraphs(_ range: Range<Int>) -> String {
         return _compose(
             paragraph,
             count: Int.random(in: range),
-            joinBy: .newLine
+            joinBy: .doubleNewLine
         )
     }
     
     /// Generates multiple paragraphs whose count is selected from within the given closed range.
     ///
     /// - Parameter count: The number of paragraphs to generate.
-    /// - Returns: The generated paragraphs joined by a new line character.
+    /// - Returns: The generated paragraphs joined by a two new line characters.
     public static func paragraphs(_ range: ClosedRange<Int>) -> String {
         return _compose(
             paragraph,
             count: Int.random(in: range),
-            joinBy: .newLine
+            joinBy: .doubleNewLine
         )
     }
     
@@ -206,7 +206,7 @@ extension Lorem {
         case none = ""
         case space = " "
         case dot = "."
-        case newLine = "\n"
+        case doubleNewLine = "\n\n"
     }
     
     fileprivate static func _compose(

@@ -11,16 +11,16 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build
         run: swift build -v
   
   linux:
     runs-on: ubuntu-latest
     container:
-      image: swift:5.2
+      image: swift:5.5
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build
         run: swift build -v
